@@ -3,13 +3,13 @@ object HigherOrderFunctions {
     
     // functions
 
+    // mention collection maps, etc
+
     // by name parameters
     
-    // example time how long another function takes
+    // example: time how long another function takes
     
-    // anonymous functions
-    
-    // mention collection maps, etc
+    // anonymous functions / unnamed functions / function literals / lambdas: map(_ + 1), map(x => x + 1), Function1()
     
   }
 }

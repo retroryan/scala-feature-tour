@@ -10,6 +10,7 @@ object PatternMatching {
     // Option
     
     // sealed case class hierarchies
+    // match is not exhaustive warning
     
     // extractors
     

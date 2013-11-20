@@ -3,7 +3,13 @@ object Tuples {
     
     // tuples
     
-    // shorthand
+    // shorthand (a, b), foo._1, map syntax
+    
+    // for comprehension / val (key, value)
+    
+    // initializing multiple vals
+    
+    // returning multiple values
     
   }
   

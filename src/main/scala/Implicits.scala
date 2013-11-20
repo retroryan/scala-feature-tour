@@ -7,5 +7,11 @@ object Implicits {
     
     // reference Play JSON
     
+    // extension methods
+    
+    // type classes
+    
+    // presedence rules with scoping
+    
   }
 }

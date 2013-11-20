@@ -7,10 +7,12 @@ object Options {
     
     // case class matching
     
-    // 
+    // getOrElse
     
     // extractors
     
-    
   }
+  
+  // example: get on a hashmap (null in Java)
+  
 }

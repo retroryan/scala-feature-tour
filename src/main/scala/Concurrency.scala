@@ -7,7 +7,9 @@ object Concurrency {
     
     // resilience / failure handling
     
-    // composition
+    // composition (Future.seq, pipelines)
+    
+    // mention actors (maybe a simple example)
     
   }
 }

@@ -1,7 +1,7 @@
 object CaseClasses {
   def main(args: Array[String]): Unit = {
     
-    // Case Class
+    // Case Classes
     
     // immutable accessors
     
@@ -21,5 +21,6 @@ object CaseClasses {
   
   case class Person(name: String, age: Int)
   
+  case class Household(father: Option[Person], mother: Option[Person], children: List[Person])
   
 }

@@ -17,6 +17,10 @@ object Collections {
     
     // mention Java Interop
     
+    // chaining higher order functions on collections
     
   }
+  
+  // Tweet use case?  Filter, then sort
+  
 }
