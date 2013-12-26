@@ -1,18 +1,33 @@
 object Options {
   def main(args: Array[String]): Unit = {
     
-    // match & case intro
+    // Options with Pattern Matching
     
-    // guards
+    val maybeName: Option[String] = if (scala.util.Random.nextBoolean()) Some("Martin") else None
     
-    // case class matching
+    println(s"name defined = ${maybeName.isDefined}")
     
-    // getOrElse
+    maybeName match {
+      case Some(name) => println(name)
+      case None => println("Nobody")
+    }
     
-    // extractors
+    
+    // Default Values
+    
+    val nameWithDefault: String = maybeName.getOrElse("Somebody")
+    
+    println(nameWithDefault)
+    
+    
+    // Type-safe Alternative to Null
+    
+    val people: Map[String, String] = Map("jon" -> "Jon Doe", "bob" -> "Bob Eee")
+    
+    println(people.get("jon"))
+    
+    println(people.get("sam"))
     
   }
-  
-  // example: get on a hashmap (null in Java)
   
 }
