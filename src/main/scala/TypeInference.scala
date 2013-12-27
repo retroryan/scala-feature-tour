@@ -1,17 +1,38 @@
 object TypeInference {
   def main(args: Array[String]): Unit = {
     
-    // basics
+    // Explicit Types
     
-    // method definitions need types
+    val foo: String = "foo"
     
-    // rule: public method return types
+    println(foo.isInstanceOf[String])
     
-    // example Option.map
     
-    // java comparison with lots of < >
+    // Value Inference
     
-    // Option.apply()
+    val bar = "bar"
+    
+    println(bar.isInstanceOf[String])
+    
+    val listOfInt = List(1,2,3)
+    
+    println(listOfInt.isInstanceOf[List[Int]])
+    
+    
+    // Methods Require Typed Parameters
+    
+    def hello(s: String): String = s"hello, $s"
+
+    println(hello("world").isInstanceOf[String])
+    
+    
+    // Method Return Types Can Be Inferred
+    
+    def bye(s: String) = s"bye, $s"
+    
+    val byeWorld = bye("world")
+    
+    println(byeWorld.isInstanceOf[String])
     
   }
   
