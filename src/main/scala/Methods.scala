@@ -39,6 +39,15 @@ object Methods {
     
     println(namedParams(bar = "something"))
     
+    
+    // Apply
+    
+    object Foo {
+      def apply(): Unit = println("Called Apply")
+    }
+    
+    Foo()
+    
   }
   
 }
