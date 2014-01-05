@@ -15,9 +15,9 @@ object Options {
     
     // Default Values
     
-    val nameWithDefault: String = maybeName.getOrElse("Somebody")
+    val nameOrDefault: String = maybeName.getOrElse("Somebody")
     
-    println(nameWithDefault)
+    println(nameOrDefault)
     
     
     // Type-safe Alternative to Null
