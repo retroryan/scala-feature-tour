@@ -1,15 +1,49 @@
 object HigherOrderFunctions {
   def main(args: Array[String]): Unit = {
     
-    // functions
-
-    // mention collection maps, etc
-
-    // by name parameters
+    // Creating Functions
     
-    // example: time how long another function takes
+    def stringLength(s: String): Int = s.length
     
-    // anonymous functions / unnamed functions / function literals / lambdas: map(_ + 1), map(x => x + 1), Function1()
+    println(stringLength("hello"))
+    
+    
+    // Higher Order Functions
+    
+    def stringTransformer(s: String, f: String => Int): Int = f(s)
+    
+    println(stringTransformer("a string", stringLength))
+    
+    
+    // Transformation with the Map Higher Order Function
+    
+    val oneTwoThree: List[String] = List("one", "two", "three")
+    
+    val oneTwoThreeLengths: List[Int] = oneTwoThree.map(stringLength)
+    
+    println(oneTwoThreeLengths)
+    
+    
+    // Anonymous Functions
+    
+    val helloLength: Int = stringTransformer("hello", s => s.length)
+    
+    println(helloLength)
+    
+    val hiLength: Int = stringTransformer("hi", _.length)
+    
+    println(hiLength)
+    
+    val oneTwoThreeLengthsShorthand = oneTwoThree.map(_.length)
+    
+    println(oneTwoThreeLengthsShorthand)
+    
+    
+    // Multi-line Anonymous Functions
+    
+    oneTwoThree.foreach { s =>
+      println(s)
+    }
     
   }
 }
