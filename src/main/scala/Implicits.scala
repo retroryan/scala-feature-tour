@@ -10,7 +10,7 @@ object Implicits {
     
     // Implicit Parameters
 
-    def upperCaseBarName(implicit bar: Bar): Bar = bar.copy(bar.name.toUpperCase)
+    def upperCaseBarName(implicit bar: Bar): Bar = Bar(bar.name.toUpperCase)
     
     val explicitFooBar = upperCaseBarName(new Bar("explicit"))
     
@@ -34,15 +34,13 @@ object Implicits {
 
     println(sortedBarNames)
     
-    trait BarOrdering extends scala.math.Ordering[Bar] {
-      def compare(x: Bar, y: Bar): Int = x.name.compare(y.name)
+    implicit val BarOrdering: Ordering[Bar] = new scala.math.Ordering[Bar] {
+      def compare(x: Bar, y: Bar): Int = x.name.length.compare(y.name.length)
     }
-
-    implicit object BarOrdering extends BarOrdering
     
-    val sortedBars = bars.sorted
+    val sortedBarsByNameLength = bars.sorted
     
-    println(sortedBars)
+    println(sortedBarsByNameLength)
     
   }
   
