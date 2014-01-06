@@ -9,13 +9,8 @@ object SingletonObjects extends App {
   }
   
   Foo.sayHello()
-
-
-  // Package Objects
   
-  import utils._
-  
-  println(prependHello(world))
+  Foo.sayHello()
   
   
   // Companion Objects
