@@ -3,8 +3,12 @@ object Traits {
     
     // Defining Traits
     
-    trait Foo {
-      def sayHello = "hello"
+    trait IFoo {
+      def sayHello: String
+    }
+    
+    trait Foo extends IFoo {
+      def sayHello: String = "hello"
     }
     
     
