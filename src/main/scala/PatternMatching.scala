@@ -11,10 +11,22 @@ object PatternMatching {
     }
 
     println(s"randomHeadsOrTails = $randomHeadsOrTails")
-    
-    
+
+
     // Match on a Constant
-    
+    // Variables that are upper-case or marked with backticks `` can be used
+
+    val red = "RED"
+    val blue = "BLUE"
+    val GREEN = "GREEN"
+
+    val favoriteColor = red
+
+    favoriteColor match {
+      case `red` => println(s"You choose red!")
+      case `blue` => println(s"You choose blue!")
+      case GREEN => println(s"You choose green!")
+    }
     
     
     
