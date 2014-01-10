@@ -24,7 +24,7 @@ object TypeInference {
     printAString(foo)
     
     
-    // Value Inference
+    // Type Parameter Inference
     
     val bar = "bar"
     
