@@ -9,8 +9,14 @@ object PatternMatching {
       case true => "heads"
       case false => "tails"
     }
-    
+
     println(s"randomHeadsOrTails = $randomHeadsOrTails")
+    
+    
+    // Match on a Constant
+    
+    
+    
     
     
     // Match on a Type
@@ -46,9 +52,16 @@ object PatternMatching {
       case Person(name, age) => println(s"$name is $age")
     }
     
-    val bobsAge = bob match {
+    val bobAge = bob match {
       case Person(_, age) => age
     }
+    
+    println(s"bob is $bobAge")
+    
+    
+    val Person(joeName, joeAge) = joe
+    
+    println(s"$joeName is $joeAge")
     
     
     // Guards
